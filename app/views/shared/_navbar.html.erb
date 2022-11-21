@@ -6,7 +6,6 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
@@ -15,12 +14,12 @@
           <li class="nav-item">
             <a class="nav-link" href="#">My bookings</a>
           </li>
+  <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">My profile</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log in</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
               <a class="dropdown-item" data-turbo-method="delete" href="#">More info</a>
             </div>
           </li>
@@ -28,5 +27,19 @@
           <!--/li-->
       </ul>
     </div>
+  <% else  %>
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">My profile</a>
+              <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">More info</a>
+            </div>
+          </li>
+          <!--li class="nav-item"-->
+          <!--/li-->
+      </ul>
+    </div>
+  <% end %>
   </div>
 </div>
