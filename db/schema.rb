@@ -26,7 +26,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_101141) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.integer "release_date"
     t.text "description"
     t.text "poster"
     t.integer "price"
@@ -36,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_101141) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.date "release_date"
     t.index ["user_id"], name: "index_movies_on_user_id"
   end
 
