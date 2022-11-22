@@ -1,7 +1,16 @@
-<%= "hello world" %>
+<h2 class="text-center py-5"><%= "All the movies available" %></h2>
 
-<ul>
-<% @movies.each do |movie|%>
-<li><%= movie.title %></li>
-<% end %>
-</ul>
+<div class="container">
+  <div class="cards">
+    <% @movies.each do |movie|%>
+      <div class="card-category" >
+   <%# <% = <image_path %>
+        <h3> <%= link_to movie.title, movie_path(movie) %> </h3>
+        <p><%= movie.release_date%> </p>
+        <p><%= movie.description%> </p>
+        <p><%= movie.price%>  </p>
+        <p><%= movie.movie_type%> </p>
+       </div>
+    <% end %>
+  </div>
+</div>
