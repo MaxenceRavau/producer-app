@@ -1,6 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
       <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "cinéma_logo.png", alt: 'Logo cinéma', width: 120 %>
     <% end %>
@@ -11,10 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">My bookings</a>
+           <%=link_to "My bookings", bookings_path(@booking), class: "nav-link"%>
           </li>
   <% if user_signed_in? %>
           <li class="nav-item dropdown">
@@ -34,7 +30,6 @@
           <li class="nav-item dropdown">
             <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">My profile</a>
               <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
               <a class="dropdown-item" data-turbo-method="delete" href="#">More info</a>
             </div>
