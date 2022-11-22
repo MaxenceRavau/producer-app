@@ -30,7 +30,6 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem "devise"
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -61,7 +60,6 @@ group :development, :test do
   gem "dotenv-rails"
 
 end
-
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
