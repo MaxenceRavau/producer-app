@@ -30,34 +30,3 @@ movies["Search"].each do |movie|
 end
 
 puts "seed is done"
-
-# movie1 = Movie.create(title: "Hamza", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# movie1.user = hamza
-# movie1.save
-
-# titanic = Movie.create(title: "titanic", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# titanic.user = hamza
-# titanic.save
-
-# indiana = Movie.create(title: "indiana", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# indiana.user = hamza
-# indiana.save
-
-# tarzan = Movie.create(title: "tarzan", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# tarzan.user = hamza
-# tarzan.save
-
-# jungle = Movie.create(title: "jungle", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# jungle.user = hamza
-# jungle.save
-
-# twilight = Movie.create(title: "twilight", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# twilight.user = hamza
-# twilight.save
-
-# puts "seed is done"
-# Movie.create([title: "Hamza"])
-# user = User.create(first_name: "test", last_name:"Triqui", email:"test@g.com", password:"123456")
-# movie2 = Movie.new(title: "movie 2", description: "test", poster: "img", price: 1000, movie_type: "Drama", address: "Paris 11")
-# movie2.user = user
-# movie2.save

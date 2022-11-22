@@ -11,3 +11,29 @@
 @import "components/index";
 @import "components/card";
 @import "pages/index";
+
+
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+  background-color: #f7f7f7;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  margin: 24px auto;
+}
+a {
+  text-decoration: none;
+  color: #268BD2;
+}
+
+a:hover {
+  color: #227FC2;
+}
+
+h2{
+  font-family: 'Overpass', sans-serif;
+}
