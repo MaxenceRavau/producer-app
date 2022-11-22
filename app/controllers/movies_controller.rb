@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
 
   def show
     authorize @movie
+    @booking = Booking.new
   end
 
   def new
