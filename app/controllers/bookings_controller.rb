@@ -2,17 +2,19 @@ class BookingsController < ApplicationController
   before_action :set_booking
 
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking).all
   end
 
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.movie = @movie
     @booking.user = current_user
+    authorize @booking
     @booking.save
     redirect_to movies_path
   end
