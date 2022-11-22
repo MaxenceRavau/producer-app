@@ -1,19 +1,29 @@
-<h4><strong><%= @movie.title %></strong></h4>
-  <p><%= @movie.description %></p>
-  <p>Genre: <%= @movie.movie_type %></p>
-  <p>Location: <%= @movie.address %></p>
-  <p>Date: <%= @movie.release_date %></p>
-  <p>Budget: <%= @movie.price %></p>
 
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Add a movie</h3>
-        <%= simple_form_for [@movie, @booking] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%= f.submit class: 'btn btn-primary' %>
-        <% end %>
+
+
+<div class="container">
+  <div class="page-movie">
+      <div class="image-movie">
       </div>
+        <div class="details-movie d-flex flex-column">
+          <h2><%= @movie.title %></h2>
+          <p> <strong> Synopsis : </strong> <%= @movie.description%> </p>
+          <p><strong>Budget:</strong> <%= @movie.price%>  </p>
+          <p><strong>Type:</strong> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
+        </div>
+        <div class="booking-movie">
+          <div class="row">
+            <div class="col-12 col-md-6 offset-lg-3">
+              <div class="bg-white rounded p-3 shadow">
+                <h3>Add a movie</h3>
+                <%= simple_form_for [@movie, @booking] do |f| %>
+                  <%= f.input :start_date %>
+                  <%= f.input :end_date %>
+                  <%= f.submit class: 'btn btn-primary' %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
+</div>
