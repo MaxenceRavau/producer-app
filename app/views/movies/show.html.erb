@@ -1,4 +1,21 @@
-<%= @movie.title %>
+  <h4><strong><%= @movie.title %></strong></h4>
+  <p><%= @movie.description %></p>
+  <p>Genre: <%= @movie.movie_type %></p>
+  <p>Location: <%= @movie.address %></p>
+  <p>Date: <%= @movie.release_date %></p>
+  <p>Budget: <%= @movie.price %></p>
 
-
-
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Add a movie</h3>
+        <%= simple_form_for [@movie, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

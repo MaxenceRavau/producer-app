@@ -1,16 +1,1 @@
-<div class="container-listing">
-  <h3><strong>Your book details</strong></h3><br>
 
-  <strong>Start Date: <%= @booking.start_date %></strong> | <strong>End Date: <%= @booking.end_date %></strong>
-
-  <h4><strong><%= @booking.movie.title %></strong></h4>
-  <p><%= @booking.movie.description %></p>
-  <p>Genre: <%= @booking.movie.movie_type %></p>
-  <p>Location: <%= @booking.movie.address %></p>
-  <p>Date: <%= @booking.movie.release_date %></p>
-  <p>Budget: <%= @booking.movie.price %></p>
-
-  <div class="booking-image"><br>
-    <img src=<%= @booking.movie.poster %> alt=" " width="1000" class="img-responsive">
-  </div>
-</div>
