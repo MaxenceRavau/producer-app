@@ -11,17 +11,18 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    authorize @movie
   end
 
   def create
     @movie = Movie.new(movie_params)
+    authorize @movie
     @movie.user = current_user
     if @movie.save
       redirect_to movie_path(@movie)
     else
       render :new, status: :unprocessable_entity
     end
-    authorize @movie
   end
 
   private
