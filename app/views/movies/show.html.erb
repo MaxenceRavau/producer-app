@@ -5,9 +5,9 @@
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path @movie.poster%>');"></div>
         <div class="details-movie d-flex flex-column">
           <h2><%= @movie.title %></h2>
-          <p> <strong> Synopsis : </strong> <%= @movie.description%> </p>
-          <p><strong>Budget:</strong> <%= @movie.price%>  </p>
-          <p><strong>Type:</strong> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
+          <p> <strong> Scenario:</strong> <%= @movie.description%> </p>
+          <p><strong>Budget:</strong> <%= @movie.price%> euros </p>
+          <p><strong>Genre:</strong> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
         </div>
         <div class="booking-movie">
           <div class="row">
