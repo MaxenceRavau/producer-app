@@ -1,17 +1,18 @@
-<h2 class="text-center py-5"><%= "My bookings" %></h2>
+<h2 class="text-center py-5"><%= "My production projects" %></h2>
 
 <div class="container">
   <div class="cards">
     <% @bookings.each do |booking|%>
       <div class="card-category" >
    <%# <% = <image_path %>
-        <h3> <%= link_to booking.movie.title, movie_path(booking.movie) %> </h3>
-        <p><%= booking.movie.release_date%></p>
-        <p><%= booking.movie.description%></p>
-        <p><%= booking.movie.price%></p>
-        <p><%= booking.movie.movie_type%></p>
-        <p><%= booking.start_date%></p>
-        <p><%= booking.end_date%></p>
+        <h2>Movie Project Title:</h2>
+        <h2><%= link_to booking.movie.title, movie_path(booking.movie) %> </h2>
+        <h3>Scenario:</h3>
+        <p class = "mb-3"><%= booking.movie.description%></p>
+        <p>Budget: <%= booking.movie.price%> euros</p>
+        <p>Genre: <%= booking.movie.movie_type%></p>
+        <p>Production start: <%= booking.start_date%></p>
+        <p>Production end: <%= booking.end_date%></p>
        </div>
     <% end %>
   </div>
