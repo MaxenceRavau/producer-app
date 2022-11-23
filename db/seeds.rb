@@ -25,9 +25,10 @@ movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 address = ["Paris", "Londres", "Lisbonne", "Berlin", "Madrid", "Bordeaux", "Lyon", "Nantes"]
+movie_type = ["Comedy", "Drama", "Horror", "SuperHero", "SciFi", "Thriller", "Genre", "Action"]
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: "none", poster: movie["Poster"], price: rand(1..1000), movie_type: ["Drama", "Comedy", "Superhero"].sample, address: address.sample, release_date: movie["Year"])
+  movie = Movie.new(title: movie["Title"], description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy", poster: movie["Poster"], price: rand(50000..500000), movie_type: movie_type.sample, address: address.sample)
   movie.user = hamza
   movie.save
 end
@@ -38,7 +39,7 @@ movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: "none", poster: movie["Poster"], price: rand(1..1000), movie_type: ["Drama", "Comedy", "Superhero"].sample, address: address.sample, release_date: movie["Year"])
+  movie = Movie.new(title: movie["Title"], description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy", poster: movie["Poster"], price: rand(50000..500000), movie_type: movie_type.sample, address: address.sample)
   movie.user = hamza
   movie.save
 end
