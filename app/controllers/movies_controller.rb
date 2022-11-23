@@ -3,7 +3,15 @@ class MoviesController < ApplicationController
 
   def index
     @movies = policy_scope(Movie).all
+    @markers = @movies.geocoded.map do |movie|
+      {
+        lat: movie.latitude,
+        lng: movie.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {movie: movie})
+      }
+    end
   end
+
 
   def show
     authorize @movie

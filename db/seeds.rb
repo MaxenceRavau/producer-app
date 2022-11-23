@@ -19,13 +19,15 @@ puts "destroying..."
 require "json"
 require "open-uri"
 
-query1 = "dark"
+query1 = "blue"
 url = "http://www.omdbapi.com/?s=$#{query1}&apikey=d68d3c66"
 movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
+address = ["Paris", "Londres", "Lisbonne", "Berlin", "Madrid", "Bordeaux", "Lyon", "Nantes"]
+
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: "none", poster: movie["Poster"], price: rand(1..1000), movie_type: ["Drama", "Comedy", "Superhero"].sample, address: "Paris", release_date: movie["Year"])
+  movie = Movie.new(title: movie["Title"], description: "none", poster: movie["Poster"], price: rand(1..1000), movie_type: ["Drama", "Comedy", "Superhero"].sample, address: address.sample, release_date: movie["Year"])
   movie.user = hamza
   movie.save
 end
@@ -36,7 +38,7 @@ movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: "none", poster: movie["Poster"], price: rand(1..1000), movie_type: ["Drama", "Comedy", "Superhero"].sample, address: "Paris", release_date: movie["Year"])
+  movie = Movie.new(title: movie["Title"], description: "none", poster: movie["Poster"], price: rand(1..1000), movie_type: ["Drama", "Comedy", "Superhero"].sample, address: address.sample, release_date: movie["Year"])
   movie.user = hamza
   movie.save
 end
