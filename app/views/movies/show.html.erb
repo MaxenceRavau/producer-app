@@ -2,18 +2,26 @@
 
 
 <div class="container">
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path @movie.poster%>');"></div>
-        <div class="details-movie d-flex flex-column">
-          <h2><%= @movie.title %></h2>
-          <p> <strong> Scenario:</strong> <%= @movie.description%> </p>
-          <p><strong>Budget:</strong> <%= @movie.price%> euros </p>
-          <p><strong>Genre:</strong> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
-        </div>
+  <div class="card-trip">
+   <h1 class = "mb-3 mt-3 text-center"><%= @movie.title %></h1>
+    <img src="<%= image_path @movie.poster%>" />
+    <div class="card-trip-infos">
+      <div>
+
+        <p><%= @movie.description%> </p>
+      </div>
+      <div>
+        <p><%= @movie.movie_type%></p>
+        <h2 class="card-trip-pricing"> <%= @movie.price%></h2>
+    </div>
+  </div>
+
+
         <div class="booking-movie">
           <div class="row">
             <div class="col-12 col-md-6 offset-lg-3">
               <div class="bg-white rounded p-3 shadow">
-                <h3>Choose your date</h3>
+                <h3 class = "text-center">Production date</h3>
                 <%= simple_form_for [@movie, @booking] do |f| %>
                   <%= f.input :start_date %>
                   <%= f.input :end_date %>
@@ -23,5 +31,5 @@
             </div>
           </div>
         </div>
-    </div>
+
 </div>
