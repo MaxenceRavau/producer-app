@@ -17,6 +17,20 @@
   border-radius: 10px;
 }
 
+.card-product-booking {
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  position: relative;
+  height: 242px;
+}
+
+
 .booking-card strong {
   font-size: 14px;
 }
@@ -24,6 +38,13 @@
 .card-img {
   height: 100%;
   min-width: 120px;
+  width: 120px;
+  background-size: cover;
+}
+
+.card-img-booking {
+  height: 100%;
+  min-width: 160px;
   width: 120px;
   background-size: cover;
 }
@@ -60,6 +81,16 @@
   color: white;
   padding: 5px;
   border-radius: 5px;
+}
+
+.product-tag-valid {
+  background-color: rgb(128, 66, 0);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
 }
 
 // Smallest device
