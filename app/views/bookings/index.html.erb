@@ -11,7 +11,9 @@
           <%= booking.movie.release_date%>
           <p> <strong> Scenario : </strong> <%= booking.movie.description%> </p>
           <p><strong>Budget:</strong> <%= booking.movie.price%> euros </p>
-          <p><strong>Genre:</strong> <span class="product-tag"> <%= booking.movie.movie_type%><span>  </p>
+          <p><strong>Genre:</strong> <span class="product-tag"> <%= booking.movie.movie_type%><span></p>
+          <p>Production start: <%= booking.start_date%></p>
+          <p>Production end: <%= booking.end_date%></p>
         </div>
       </div>
     <% end %>
