@@ -20,9 +20,34 @@
   background-color: #d3d3d312;
 }
 
+.card-product-booking {
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  position: relative;
+  height: 242px;
+}
+
+
+.booking-card strong {
+  font-size: 14px;
+}
+
 .card-img {
   height: 100%;
   min-width: 120px;
+  width: 120px;
+  background-size: cover;
+}
+
+.card-img-booking {
+  height: 100%;
+  min-width: 160px;
   width: 120px;
   background-size: cover;
 }
@@ -34,12 +59,20 @@
   margin: 0;
 }
 
+.card h3 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  margin: -0;
+  margin-bottom: -1rem;
+}
+
 .card-product p {
   font-size: 13px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .card-product .card-product-infos {
@@ -54,6 +87,16 @@
   position: absolute;
   bottom: 8px;
   right: 14px;
+}
+
+.product-tag-valid {
+  background-color: rgb(128, 66, 0);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
 }
 
 // Smallest device

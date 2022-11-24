@@ -1,21 +1,24 @@
 <h2 class="text-center mt-4 mb-4 strong fw-bolder"><%= "My production projects" %></h2>
 
-<div class="container">
+
+<div class="container-booking">
   <div class="row">
     <% @bookings.each do |booking|%>
-      <div class="card-product">
-      <div class="card-img"   style="background-image:url('<%= image_path booking.movie.poster%>');" >
+      <div class="card-product-booking booking-card mb-3">
+      <div class="card-img-booking" style="background-image:url('<%= image_path booking.movie.poster%>');" >
       </div>
-        <div class="d-flex flex-column flex-grow-1 p-2">
-          <h2><%= booking.movie.title %></h2>
+        <div class="d-flex flex-column flex-grow-1 p-2 m-4">
+          <h3><%= link_to booking.movie.title, movie_path(booking.movie) %></h3>
           <%= booking.movie.release_date%>
-          <p> <strong> Scenario : </strong> <%= booking.movie.description%> </p>
+          <p><strong> Scenario : </strong><%= booking.movie.description%> </p>
           <p><strong>Budget:</strong> <%= booking.movie.price%> euros </p>
           <p><strong>Genre:</strong> <span class="product-tag"> <%= booking.movie.movie_type%><span></p>
-          <p>Production start: <%= booking.start_date%></p>
-          <p>Production end: <%= booking.end_date%></p>
+          <p><strong>Production start: </strong><%= booking.start_date%></p>
+          <p><strong>Production end: </strong><%= booking.end_date%></p>
         </div>
+        <h6><span class="product-tag-valid">Validation en attente ... <span></h6>
       </div>
     <% end %>
   </div>
+
 </div>

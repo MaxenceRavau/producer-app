@@ -24,4 +24,27 @@
 
 h1{
   font-family: 'Blinker', sans-serif;
+  text-align: left;
+  margin-left: -300px;
+  font-weight:600;
 }
+
+.btn-black-search{
+  background-color: black;
+  color: white;
+}
+
+.form-control-search{
+  background-color: rgb(239, 239, 239);
+}
+
+.nav-link{
+  color: black;
+  padding : 4px;
+  border-color: black;
+  border-style: solid;
+  margin-right: 40px;
+
+}
+
+.nav-link:hover {background-color: black; color:white}

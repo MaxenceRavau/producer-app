@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   padding: 90px 0;
+  height: 250px;
 }
 
 .banner h1 {
@@ -18,3 +19,13 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+.btn-white-banner{
+  background-color: white;
+  color: black;
+  padding : 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+.btn-white-banner:hover {background-color: black; color:white;border-color: white; }
