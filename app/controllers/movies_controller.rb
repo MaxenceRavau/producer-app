@@ -2,7 +2,11 @@ class MoviesController < ApplicationController
   before_action :set_movie, only: [:show]
 
   def index
-    @movies = policy_scope(Movie).all
+    if params[:query].present?
+      @movies = policy_scope(Movie).where(movie_type: params[:query])
+    else
+      @movies = policy_scope(Movie).all
+    end
     @markers = @movies.geocoded.map do |movie|
       {
         lat: movie.latitude,
@@ -11,7 +15,6 @@ class MoviesController < ApplicationController
       }
     end
   end
-
 
   def show
     authorize @movie
