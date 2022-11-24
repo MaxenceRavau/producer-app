@@ -5,9 +5,12 @@
   </div>
   <div class="container d-flex justify-content-between ">
     <div class="card-movie-infos ">
-      <p> <strong> Scenario:</strong> <%= @movie.description%> </p>
-      <p><strong>Budget:</strong> <%= @movie.price%> euros </p>
-      <p><strong>Genre:</strong> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
+      <h4>Scenario:</h4>
+      <p> <%= @movie.description%> </p>
+      <h4>Budget:</h4>
+      <p><%= @movie.price%> euros </p>
+      <h4>Genre:</h4>
+      <p> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
     </div>
 
     <div class="bg-white rounded p-3 shadow">
@@ -20,3 +23,5 @@
     </div>
   </div>
 </div>
+
+
