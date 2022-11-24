@@ -1,19 +1,21 @@
-<h2 class="text-center py-5"><%= "My production projects" %></h2>
+<h2 class="text-center mt-4 mb-4 strong fw-bolder"><%= "My production projects" %></h2>
 
 <div class="container">
-  <div class="cards">
+  <div class="row">
     <% @bookings.each do |booking|%>
-      <div class="card-category" >
-   <%# <% = <image_path %>
-        <h2>Movie Project Title:</h2>
-        <h2><%= link_to booking.movie.title, movie_path(booking.movie) %> </h2>
-        <h3>Scenario:</h3>
-        <p class = "mb-3"><%= booking.movie.description%></p>
-        <p>Budget: <%= booking.movie.price%> euros</p>
-        <p>Genre: <%= booking.movie.movie_type%></p>
-        <p>Production start: <%= booking.start_date%></p>
-        <p>Production end: <%= booking.end_date%></p>
-       </div>
+      <div class="card-product">
+      <div class="card-img"   style="background-image:url('<%= image_path booking.movie.poster%>');" >
+      </div>
+        <div class="d-flex flex-column flex-grow-1 p-2">
+          <h2><%= booking.movie.title %></h2>
+          <%= booking.movie.release_date%>
+          <p> <strong> Scenario : </strong> <%= booking.movie.description%> </p>
+          <p><strong>Budget:</strong> <%= booking.movie.price%> euros </p>
+          <p><strong>Genre:</strong> <span class="product-tag"> <%= booking.movie.movie_type%><span></p>
+          <p>Production start: <%= booking.start_date%></p>
+          <p>Production end: <%= booking.end_date%></p>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
