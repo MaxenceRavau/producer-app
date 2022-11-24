@@ -2,30 +2,42 @@
   background-size: cover;
   background-position: center;
   padding: 90px 0;
-  height: 250px;
+  height: 500px;
 }
 
 .banner h1 {
   margin: 0;
+  margin-left: 40px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  font-family: 'Blinker', sans-serif;
 }
 
 .banner p {
   font-size: 20px;
+  margin-left: 40px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+  font-family: 'Blinker', sans-serif;
 }
 
 .btn-white-banner{
   background-color: white;
   color: black;
-  padding : 10px;
+  padding : 20px;
+  margin-left: 40px;
   border-style: solid;
   border-color: black;
+  font-family: 'Blinker', sans-serif;
+  font-size: 20px;
 }
 
 .btn-white-banner:hover {background-color: black; color:white;border-color: white; }
+
+.container-banner{
+  margin : 20px;
+}

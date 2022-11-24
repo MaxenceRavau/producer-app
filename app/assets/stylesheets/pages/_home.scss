@@ -1,6 +1,39 @@
 // Specific CSS for your home-page
 .container-all{
-  margin-left: 200px;
-  margin-right: 200px;
   background-color: white;
+}
+
+.container-slider{
+   height: 70%;
+   width: 70%;
+   margin-right: auto;
+   margin-left: auto;
+   padding-bottom: 20px;
+}
+
+// .carousel-inner{
+//    background-size: cover;
+//     background-position:cover;
+// }
+
+.btn-movie-project{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Blinker', sans-serif;
+  border-color: black;
+  border-style: solid;
+  padding: 20px;
+  color: black;
+  font-size: 30px;
+  text-decoration-color: none;
+}
+
+.btn-movie-project:hover {background-color: black; color:white;border-color: white; }
+
+.orga-btn{
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
 }
