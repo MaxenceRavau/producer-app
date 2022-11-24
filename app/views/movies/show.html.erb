@@ -5,8 +5,8 @@
    </div>
   <div class="card-movie-infos ">
       <h2 class="title-movies"><%= @movie.title %></h2>
-      <p> <strong> Scenario: </strong><%= @movie.description%> </p>
-      <p><strong>Budget:</strong> <%= @movie.price%> euros</p>
+      <p><strong>Scenario: </strong><%= @movie.description%> </p>
+      <p><strong>Daily budget:</strong> <%= @movie.price%> euros</p>
       <p><strong>Genre: </strong><span class="product-tag"> <%= @movie.movie_type%><span>  </p>
 
        <div class="bg-white rounded p-3 shadow">
@@ -14,7 +14,9 @@
       <%= simple_form_for [@movie, @booking] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
-      <%= f.submit class: 'btn-booking-black' %>
+      <div class = "text-center 100%">
+      <%= f.submit class: "btn-booking-black" %>
+      </div>
       <% end %>
     </div>
     </div>
