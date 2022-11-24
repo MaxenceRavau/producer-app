@@ -1,11 +1,12 @@
-<h2 class="text-center py-3"><%= "All the projects available" %></h2>
-
-<div style="width: 85%; height: 300px; margin-left: 110px; "
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<h2 class="text-center py-3"><%= "All available projects" %></h2>
+<p class = "text-center"><strong><%= @movies.size %></strong> movies</p>
+<div class="container">
+  <div style="width: 100%; height: 300px; margin-left: none; "
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
-
 
 <div class="container">
   <div class="cards">
@@ -16,9 +17,11 @@
         <div class="d-flex flex-column flex-grow-1 p-2">
           <h2><%= link_to movie.title, movie_path(movie) %></h2>
           <%= movie.release_date%>
-          <p> <strong> Scenario : </strong> <%= movie.description%> </p>
-          <p><strong>Budget:</strong> <%= movie.price%> euros </p>
-          <p><strong>Genre:</strong> <span class="product-tag"> <%= movie.movie_type%><span>  </p>
+          <p> <strong><i class="fa-solid fa-film"></i> : </strong> <%= movie.description%> </p>
+          <p><strong><i class="fa-solid fa-sack-dollar"></i> : </strong> <%= movie.price%> euros </p>
+          <div class="align-bottom">
+            <p class = "text-end"><strong></strong> <span class="product-tag"> <%= movie.movie_type%><span>  </p>
+          </div>
         </div>
       </div>
     <% end %>
