@@ -90,13 +90,20 @@
 }
 
 .product-tag-valid {
-  background-color: rgb(128, 66, 0);
+  background-color: #d26a0e;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 21px;
+  right: 8px;
+}
+
+.product-tag-booking-show {
+  background-color: black;
   color: white;
   padding: 5px;
   border-radius: 5px;
-  position: absolute;
-  bottom: 12px;
-  right: 8px;
 }
 
 // Smallest device

@@ -46,7 +46,7 @@ movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(50000..500000), movie_type: movie_type.sample, address: address.sample)
+  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(250..2500).ceil(-1), movie_type: movie_type.sample, address: address.sample)
   movie.user = hamza
   movie.save
 end
@@ -57,7 +57,7 @@ movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(50000..500000), movie_type: movie_type.sample, address: address.sample)
+  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(250..2500).ceil(-1), movie_type: movie_type.sample, address: address.sample)
   movie.user = hamza
   movie.save
 end
