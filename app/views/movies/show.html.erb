@@ -1,27 +1,25 @@
-
 <div class="movie-card pt-6">
-  <div class="banner-movie-page" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path @movie.poster%>');">
-  <h2><%= @movie.title %></h2>
-  </div>
-  <div class="container d-flex justify-content-between ">
-    <div class="card-movie-infos ">
-      <h4>Scenario:</h4>
-      <p> <%= @movie.description%> </p>
-      <h4>Budget:</h4>
-      <p><%= @movie.price%> euros </p>
-      <h4>Genre:</h4>
-      <p> <span class="product-tag"> <%= @movie.movie_type%><span>  </p>
-    </div>
+<div class="container d-flex justify-content-between ">
+ <div class="banner-movie-page" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path @movie.poster%>');">
+   <h2></h2>
+   </div>
+  <div class="card-movie-infos ">
+      <h2 class="title-movies"><%= @movie.title %></h2>
+      <p> <strong> Scenario: </strong><%= @movie.description%> </p>
+      <p><strong>Budget:</strong> <%= @movie.price%> euros</p>
+      <p><strong>Genre: </strong><span class="product-tag"> <%= @movie.movie_type%><span>  </p>
 
-    <div class="bg-white rounded p-3 shadow">
+       <div class="bg-white rounded p-3 shadow">
       <h3>Production date</h3>
       <%= simple_form_for [@movie, @booking] do |f| %>
       <%= f.input :start_date %>
       <%= f.input :end_date %>
-      <%= f.submit class: 'btn btn-primary' %>
+      <%= f.submit class: 'btn-booking-black' %>
       <% end %>
     </div>
-  </div>
+    </div>
+
+
 </div>
 
-
+</div>
