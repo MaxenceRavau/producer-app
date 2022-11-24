@@ -7,16 +7,20 @@
 }
 
 .card-movie-infos{
-  padding: 10px;
+  padding-left: 20px;
   margin: 20px;
+  border-left: solid, black;
+  margin-bottom: 20px;
 
 }
 
+
 .banner-movie-page{
     background-size: cover;
-    background-position: center;
-    padding: 90px 0;
-    height: 200px;
+    background-position:cover;
+    width: 800px;
+    height: 580px;
+
   }
 
   .movie-card{
@@ -26,18 +30,12 @@
 
   }
 
-  h2{
-    text-align: center;
-    color: white;
-    font-family: 'Blinker', sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-  }
 
   .bg-white{
     flex: 1 1 90%;
     padding: 5px;
-    margin :20px;
+    margin :10px;
+    margin-top: 50px;
   }
 
   h3{
@@ -50,3 +48,19 @@
     font-size: 20px;
 
   }
+
+  .title-movies{
+    margin-bottom: 20px;
+  }
+
+  .btn-booking-black{
+     color:black;
+     background-color: white;
+     padding : 10px;
+     border-style: solid;
+     border-color: black;
+     border-width: 3px;
+     width: 600px;
+  }
+
+  .btn-booking-black:hover {background-color: black; color:white}

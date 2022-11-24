@@ -40,9 +40,11 @@ h1{
 
 .nav-link{
   color: black;
-  padding : 2px;
+  padding : 4px;
   border-color: black;
   border-style: solid;
   margin-right: 40px;
 
 }
+
+.nav-link:hover {background-color: black; color:white}
