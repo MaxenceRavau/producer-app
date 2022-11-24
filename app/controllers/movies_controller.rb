@@ -11,7 +11,8 @@ class MoviesController < ApplicationController
       {
         lat: movie.latitude,
         lng: movie.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {movie: movie})
+        info_window: render_to_string(partial: "info_window", locals: {movie: movie}),
+        image_url: helpers.asset_url("/assets/cinéma_logo-9208f71acd401396f67a59cb5b1109a9531e9acead6141d4871ae488030756d7.png")
       }
     end
   end
