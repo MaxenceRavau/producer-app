@@ -25,8 +25,10 @@ body {
   margin: 24px auto;
 }
 a {
+  border-bottom: solid;
   text-decoration: none;
-  color: #268BD2;
+  color: black;
+  font-size: large;
 }
 
 a:hover {
