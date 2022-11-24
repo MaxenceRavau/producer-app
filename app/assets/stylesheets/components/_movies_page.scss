@@ -6,3 +6,41 @@
   justify-content: flex-start;
 }
 
+.card-movie-infos{
+  padding: 10px;
+  margin: 20px;
+
+}
+
+
+.banner-movie-page{
+    background-size: cover;
+    background-position: center;
+    padding: 90px 0;
+    height: 200px;
+  }
+
+  .movie-card{
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+
+  }
+
+  h2{
+    text-align: center;
+    color: white;
+    font-family: 'Blinker', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .bg-white{
+    flex: 1 1 90%;
+    padding: 5px;
+    margin :20px;
+  }
+
+  h3{
+    text-align: center;
+  }

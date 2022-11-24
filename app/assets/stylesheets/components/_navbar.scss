@@ -1,8 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.896);
+  background-color: white;
+  border-color: black;
+  border-bottom: solid;
+  border-top: solid;
+  border-width: 3px;
   position: sticky;
-  top: 0px;
+  top:0px;
   z-index: 3;
 }
 
@@ -11,9 +15,13 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
 }
 
 .navbar-brand{
   text-align: left;
+}
+
+h1{
+  font-family: 'Blinker', sans-serif;
 }
