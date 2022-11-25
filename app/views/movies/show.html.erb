@@ -7,7 +7,7 @@
       <h2 class="title-movies"><%= @movie.title %></h2>
       <p><strong>Scenario: </strong><%= @movie.description%> </p>
       <p><strong>Daily budget:</strong> <%= @movie.price%> euros</p>
-      <p><strong>Genre: </strong><span class="product-tag"> <%= @movie.movie_type%><span>  </p>
+      <p><strong>Genre: </strong><span class="product-tag-booking-show"> <%= @movie.movie_type%><span>  </p>
       <div class="p-2 shadow">
       <h3 class = "mb-2"> When do you want to produce <%= @movie.title%> ?</h3>
         <%= simple_form_for [@movie, @booking], data: { controller: 'flatpickr' } do |f| %>
