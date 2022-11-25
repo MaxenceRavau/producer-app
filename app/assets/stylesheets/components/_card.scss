@@ -21,6 +21,7 @@
 }
 
 .card-product-booking {
+  padding: 0;
   overflow: hidden;
   height: 200px;
   background: white;
@@ -29,8 +30,10 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+  border-style: solid;
   position: relative;
   height: 242px;
+  background-color: #d3d3d312;
 }
 
 
