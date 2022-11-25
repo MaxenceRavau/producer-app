@@ -40,13 +40,26 @@ movie_synopsis = [
   "A reclusive romance novelist on a book tour with her cover model gets swept up in a kidnapping attempt that lands them both in a cutthroat jungle adventure",
 ]
 
+  name_directors = [
+  "Steven Spielberg",
+   "Francis Coppola",
+   "Gus Van Sant",
+   "David Fincher",
+   " Quentin Tarantino",
+   " Roman Polanski",
+   " Steven Soderbergh",
+    " Joel et Ethan Coen",
+    " Martin Scorsese",
+    "David Lynch",
+]
+
 query1 = "blue"
 url = "http://www.omdbapi.com/?s=$#{query1}&apikey=d68d3c66"
 movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(250..2500).ceil(-1), movie_type: movie_type.sample, address: address.sample)
+  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(250..2500).ceil(-1), movie_type: movie_type.sample, address: address.sample, director: name_directors.sample)
   movie.user = hamza
   movie.save
 end
@@ -57,7 +70,7 @@ movies_serialized = URI.open(url).read
 movies = JSON.parse(movies_serialized)
 
 movies["Search"].each do |movie|
-  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(250..2500).ceil(-1), movie_type: movie_type.sample, address: address.sample)
+  movie = Movie.new(title: movie["Title"], description: movie_synopsis.sample, poster: movie["Poster"], price: rand(250..2500).ceil(-1), movie_type: movie_type.sample, address: address.sample, director: name_directors.sample)
   movie.user = hamza
   movie.save
 end
