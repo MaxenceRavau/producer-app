@@ -20,7 +20,10 @@
   background-color: #d3d3d312;
 }
 
+.card-product:hover{box-shadow: 10px 5px 5px grey;}
+
 .card-product-booking {
+  padding: 0;
   overflow: hidden;
   height: 200px;
   background: white;
@@ -29,8 +32,10 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
+  border-style: solid;
   position: relative;
   height: 242px;
+  background-color: #d3d3d312;
 }
 
 
@@ -139,4 +144,8 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.cards:link{
+  text-decoration: none;
 }
