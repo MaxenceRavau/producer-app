@@ -8,16 +8,17 @@
       <p><strong>Scenario: </strong><%= @movie.description%> </p>
       <p><strong>Daily budget:</strong> <%= @movie.price%> euros</p>
       <p><strong>Genre: </strong><span class="product-tag"> <%= @movie.movie_type%><span>  </p>
-
-       <div class="bg-white rounded p-3 shadow">
-      <h3>Production date</h3>
-      <%= simple_form_for [@movie, @booking] do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <div class = "text-center 100%">
-      <%= f.submit class: "btn-booking-black" %>
-      </div>
-      <% end %>
+      <div class="p-2 shadow">
+      <h3 class = "mb-2"> When do you want to produce <%= @movie.title%> ?</h3>
+        <%= simple_form_for [@movie, @booking], data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDateInput" } } %>
+          <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDateInput" } } %>
+          <div class = "text-center">
+          <%= f.submit class: "btn-booking-black" %>
+          </div>
+        <% end %>
+        <div class = " text center py-3">
+        </div>
     </div>
     </div>
 
